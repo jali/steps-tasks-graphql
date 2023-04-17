@@ -1,0 +1,90 @@
+# Node.js
+node_modules/
+dist/
+build/
+*.log
+*.pid
+*.lock
+
+# TypeScript
+*.tsbuildinfo
+*.js.map
+
+# GraphQL
+*.graphql
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Editor/IDE files
+.vscode/
+.idea/
+
+# Logs and build artifacts
+*.log
+*.log.*
+*.log-*
+*.pid
+*.pid.*
+*.pid-*
+*.lock
+*.tmp
+*.swp
+*.out
+*.bak
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.gz
+*.tgz
+*.7z
+*.bak
+*.orig
+
+# Dependencies and build outputs
+yarn-error.log
+npm-debug.log
+npm-debug.log.*
+yarn.lock
+package-lock.json
+*.tgz
+/dist/
+/build/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+/output
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.idea
+.npmrc
+.docker_host
+.tag
+assets.json
+.happypack
+package.json-e
+newrelic_agent.log
+nohup.out
+.gitmodules
+.project
+.settings/%
