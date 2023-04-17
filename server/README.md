@@ -15,7 +15,7 @@ $ npm run dev
 Open this URL in a browser
 
 ```
-https://localhost:4000/graphql
+http://localhost:4000/graphql
 ```
 
 Example query
