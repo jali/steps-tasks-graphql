@@ -13,8 +13,8 @@ const StepType: GraphQLObjectType = new GraphQLObjectType({
     name: 'Step',
     description: 'This represents a step as milestone',
     fields: () => ({
-        id: { type: GraphQLNonNull(GraphQLInt) },
-        name: { type: GraphQLNonNull(GraphQLString) },
+        id: { type: new GraphQLNonNull(GraphQLInt) },
+        name: { type: new GraphQLNonNull(GraphQLString) },
         tasks: {
             type: new GraphQLList(TaskType),
             resolve: (parent, args) => {
@@ -28,10 +28,10 @@ const TaskType = new GraphQLObjectType({
     name: 'Task',
     description: 'Retrieve a task belongs to a step',
     fields: () => ({
-        id: { type: GraphQLNonNull(GraphQLInt) },
-        name: { type: GraphQLNonNull(GraphQLString) },
-        complete: {type: GraphQLNonNull(GraphQLBoolean) },
-        stepId: { type: GraphQLNonNull(GraphQLInt) },
+        id: { type: new GraphQLNonNull(GraphQLInt) },
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        complete: {type: new GraphQLNonNull(GraphQLBoolean) },
+        stepId: { type: new GraphQLNonNull(GraphQLInt) },
         steps: {
             type: new GraphQLList(StepType),
             resolve: (task) => {
@@ -82,8 +82,8 @@ const RootMutationType = new GraphQLObjectType({
             type: TaskType,
             description: 'Update a task',
             args: {
-                id: { type: GraphQLNonNull(GraphQLInt) },
-                complete: { type: GraphQLNonNull(GraphQLBoolean) }
+                id: { type: new GraphQLNonNull(GraphQLInt) },
+                complete: { type: new GraphQLNonNull(GraphQLBoolean) }
             },
             resolve: (parent, args) => {
                 const objIdx = tasks.findIndex((obj) => obj.id === args.id);
